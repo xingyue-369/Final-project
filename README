@@ -1,1 +1,23 @@
+How to run the algorithms:
+step1  Start the ORB-SLAM3 algorithm
+source ~/Final-project/install/setup.bash
+ros2 run ros2_orb_slam3 rgbd_node_cpp
+
+step2 Feed data to the algorithm
+ros2 bag play ~/Downloads/freiburg1_ros2/
+
+step3 Monitor (optional)
+ros2 topic hz /camera/rgb/image_color
+
+
+data format we need(after preprocessing):
+✅ ROS2 bag with synchronized topics
+✅ Camera calibration YAML file
+✅ ORB vocabulary file 
+
+
+dataset we use:
+freiburg3/long_office_household - Loop closure
+freiburg2/desk_with_person - Dynamic objects
+freiburg3/walking_xyz - Fast motion
 
