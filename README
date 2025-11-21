@@ -9,6 +9,13 @@ ros2 bag play ~/Downloads/freiburg1_ros2/
 step3 Monitor (optional)
 ros2 topic hz /camera/rgb/image_color
 
+when Run the last two nodes use the following command as the node name can't match:
+ros2 run ros2_orb_slam3 mono_inertial_node_cpp \
+  --ros-args \
+  -r /camera/image_raw:=/cam0/image_raw \
+  -r /imu:=/imu0
+
+
 
 data format we need(after preprocessing):
 ✅ ROS2 bag with synchronized topics
