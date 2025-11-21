@@ -39,5 +39,10 @@ stereo_inertial_node_cpp  2×RGB + IMU          Stereo camera with IMU(EuRoC MH_
 Check whether the node publish and subscribe successfully:
 ros2 topic info /cam0/image_raw
 
+example success output:
+Type: sensor_msgs/msg/Image
+Publisher count: 1
+Subscription count: 1
+
 
 
